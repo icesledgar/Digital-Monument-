@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ monument.name }}</title>
+    <link rel="stylesheet" href="{% static 'style/css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1><center>{{ monument.name }}</center></h1>
+        <p>{{ monument.description }}</p>
+        <p><strong>Year Built:</strong> {{ monument.year_built }}</p>
+        {% if monument.image %}
+            <img src="{{ monument.image.url }}" alt="{{ monument.name }}">
+        {% else %}
+            <p>No image available</p>
+        {% endif %}
+        <br><br>
+        <a href="/">← Back to home</a>
+    </div>
+    <footer>
+        <p>Digital Monument Project © 2024</p>
+    </footer>
+</body>
+</html>

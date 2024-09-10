@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    word-spacing: 5px;
+}
+
+h1, h2 {
+    color: #d72222;
+}
+p {
+    word-spacing: 5px;
+  }
+
+ 
+
+ .monument-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #3498db;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(210, 16, 16, 0.962);
+    margin: 20px;
+    padding: 20px;
+    width: 300px;
+} 
+
+.monument-item img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+ a  {
+    color: #3498db;
+    text-decoration: none;
+}  
+

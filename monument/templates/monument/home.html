@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monument Listings</title>
+    <link rel="stylesheet" href="{% static 'style/css/styles.css' %}">
+
+   
+</head>
+<body>
+  
+    <div class="container">
+        <h1><center>Monument Listings</center></h1>
+        <!-- <p>{{ monuments }}</p>  -->
+        <ul class="monument-list">
+            {% for monument in monuments %}
+                <li>
+                    <h2>
+                        <a href="{% url 'monument_detail' monument.pk %}">{{ monument.name }}</a>
+                    </h2>
+                    <p>Built in: {{ monument.year_built }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <br>
+    <br>
+    <br>
+    <footer>
+        <p>Digital Monument Project © 2024</p>
+    </footer>
+</body>
+</html>
